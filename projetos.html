@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#041f2d;
+color:#f5f8fa;
+font-family:'Inter',sans-serif;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+line-height:1.6;
+}
+
+.projetos{
+padding:80px 6%;
+max-width:1100px;
+margin:auto;
+width:100%;
+}
+
+.projetos h2{
+text-align:center;
+margin-bottom:50px;
+font-size:2.5rem;
+}
+
+.projetoContainer{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.projetoCard{
+background:#0b3c53;
+width:320px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 30px rgba(0,0,0,.25);
+transition:.3s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.projetoCard:hover{
+transform:translateY(-10px);
+}
+
+.projetoCard img{
+width:100%;
+height:200px;
+background:#082f42;
+object-fit:cover;
+}
+
+.conteudoCard{
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start; /* Alinha o conteúdo à esquerda igual ao exemplo */
+  text-align:left;
+  gap:12px;
+}
+
+/* Nova estilização para as Tags dos Projetos */
+.projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.tag {
+  background: #041f2d;
+  color: #4fd1c5;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(79, 209, 197, 0.2);
+}
+
+.conteudoCard h3{
+font-size:1.4rem;
+margin-bottom: 5px;
+}
+
+.conteudoCard .btn {
+align-self: stretch;
+text-align: center;
+}
+
+.rodape{
+margin-top:50px;
+padding:25px;
+text-align:center;
+background:rgba(0,0,0,.15);
+color:#7dbdb6;
+}
+    
+  </style>
+  
+  
+</head>
+
+<body>
+  
+  
+  <h1>Projetos</h1>
+
+<h4>Aqui vc terá acesso aos meus projetos recentes e os que estiverem em andamento.</h4>
+
+
+<div class="projetoContainer">
+
+<div class="projetoCard">
+<img src="mari.jpg" alt="mari">
+<div class="conteudoCard">
+  <div class="projeto-tags">
+    <span class="tag">Portfólio Pessoal</span>
+    <span class="tag">Livro</span>
+    <span class="tag">Poema</span>
+  </div>
+  <h3>Portfólio Mariana</h3>
+  <a href="https://akanecheng.github.io/mariana-virtudes/" class="btn">Ver mais</a>
+</div>
+</div>
+
+<div class="projetoCard">
+<img src="sp.jpg" alt="sp">
+<div class="conteudoCard">
+  <div class="projeto-tags">
+    <span class="tag">Arte Digital</span>
+    <span class="tag">Comissões</span>
+  </div>
+  <h3>Site de desenhos</h3>
+  <a href="https://akanecheng.github.io/GForcArt-/" class="btn">Ver mais</a>
+</div>
+</div>
+
+</div>
+  
+</div>
+  
+  <footer class="rodape">
+℗ Todos os direitos reservados
+</footer>
+</body>
+
+</html>
