@@ -1,167 +1,421 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <style>
-  *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meus Projetos | Polyana Souza</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-background:#041f2d;
-color:#f5f8fa;
-font-family:'Inter',sans-serif;
-min-height:100vh;
-display:flex;
-flex-direction:column;
-line-height:1.6;
+  background:#041f2d;
+  color:#f5f8fa;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  line-height:1.6;
 }
 
-.projetos{
-padding:80px 6%;
-max-width:1100px;
-margin:auto;
-width:100%;
+h1,h2,h3{
+  font-family:'Poppins',sans-serif;
+  letter-spacing:-0.5px;
 }
 
-.projetos h2{
-text-align:center;
-margin-bottom:50px;
-font-size:2.5rem;
+/* HEADER IDENTICO AO INDEX */
+header{
+  width:100%;
+  height:80px;
+  padding:0 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#0b3c53;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.logo img{
+  height:50px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  font-size:.9rem;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:#4fd1c5;
+}
+
+/* CONTEÚDO PRINCIPAL DA PÁGINA DE PROJETOS */
+main {
+  flex: 1;
+}
+
+.projetos-header {
+  text-align: center;
+  padding: 60px 6% 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.projetos-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.projetos-header p {
+  color: #a7d7d1;
+  font-size: 1.1rem;
+}
+
+.projetos-container-section {
+  padding: 20px 6% 80px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
 }
 
 .projetoContainer{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
 }
 
 .projetoCard{
-background:#0b3c53;
-width:320px;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 30px rgba(0,0,0,.25);
-transition:.3s;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
+  background:#0b3c53;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+  transition: transform .3s ease, box-shadow .3s ease;
+  display:flex;
+  flex-direction:column;
+  border: 1px solid rgba(79, 209, 197, 0.1);
 }
 
 .projetoCard:hover{
-transform:translateY(-10px);
+  transform:translateY(-8px);
+  box-shadow:0 12px 35px rgba(79,209,197,.2);
+  border-color: rgba(79, 209, 197, 0.4);
 }
 
 .projetoCard img{
-width:100%;
-height:200px;
-background:#082f42;
-object-fit:cover;
+  width:100%;
+  height:220px;
+  background:#082f42;
+  object-fit:cover;
 }
 
 .conteudoCard{
   padding:25px;
   display:flex;
   flex-direction:column;
-  align-items:flex-start; /* Alinha o conteúdo à esquerda igual ao exemplo */
-  text-align:left;
+  flex:1;
   gap:12px;
 }
 
-/* Nova estilização para as Tags dos Projetos */
 .projeto-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 5px;
 }
 
 .tag {
   background: #041f2d;
   color: #4fd1c5;
   font-size: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
-  padding: 6px 14px;
+  padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid rgba(79, 209, 197, 0.2);
 }
 
 .conteudoCard h3{
-font-size:1.4rem;
-margin-bottom: 5px;
+  font-size:1.4rem;
+  color: #fff;
 }
 
-.conteudoCard .btn {
-align-self: stretch;
-text-align: center;
+.conteudoCard p{
+  font-size: 0.95rem;
+  color: #a7d7d1;
+  flex: 1;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn{
+  background:#4fd1c5;
+  padding:10px 20px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#041f2d;
+  transition:.3s;
+  display:inline-block;
+  text-align: center;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.btn:hover{
+  background:#78e4d9;
+  box-shadow: 0 0 15px rgba(79,209,197,0.4);
 }
 
 .rodape{
-margin-top:50px;
-padding:25px;
-text-align:center;
-background:rgba(0,0,0,.15);
-color:#7dbdb6;
+  margin-top:auto;
+  padding:25px;
+  text-align:center;
+  background:rgba(0,0,0,.2);
+  color:#7dbdb6;
+  font-size: 0.9rem;
 }
-    
-  </style>
-  
-  
+
+/* Efeito da Estrela */
+.star{
+  position:fixed;
+  top:120px;
+  left:50%;
+  width:22px;
+  height:22px;
+  pointer-events:none;
+  z-index:9999;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.star::before,
+.star::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#b8ffff;
+  clip-path:polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  box-shadow: 0 0 10px #7df9ff, 0 0 25px #7df9ff, 0 0 60px rgba(125,249,255,.9);
+  border-radius:4px;
+}
+
+.star::after{
+  transform:rotate(45deg);
+  opacity:.7;
+}
+
+.trail{
+  position:fixed;
+  height:3px;
+  border-radius:999px;
+  pointer-events:none;
+  z-index:9998;
+  background:linear-gradient(90deg, rgba(125,249,255,0), rgba(125,249,255,.9));
+  filter:blur(1px);
+  animation:trailFade .7s linear forwards;
+}
+
+@keyframes trailFade{
+  0%{ opacity:1; }
+  100%{ opacity:0; }
+}
+
+@media(max-width:900px){
+  header{
+    padding:0 20px;
+  }
+
+  nav ul{
+    gap:15px;
+  }
+
+  nav a{
+    font-size:.75rem;
+  }
+
+  .projetos-header h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>
 </head>
-
 <body>
-  
-  
-  <h1>Projetos</h1>
 
-<h4>Aqui vc terá acesso aos meus projetos recentes e os que estiverem em andamento.</h4>
-
-
-<div class="projetoContainer">
-
-<div class="projetoCard">
-<img src="mari.jpg" alt="mari">
-<div class="conteudoCard">
-  <div class="projeto-tags">
-    <span class="tag">Portfólio Pessoal</span>
-    <span class="tag">Livro</span>
-    <span class="tag">Poema</span>
-  </div>
-  <h3>Portfólio Mariana</h3>
-  <a href="https://akanecheng.github.io/mariana-virtudes/" class="btn">Ver mais</a>
-</div>
+<header>
+<div class="logo">
+<img src="logo.png" alt="Logo">
 </div>
 
-<div class="projetoCard">
-<img src="sp.jpg" alt="sp">
-<div class="conteudoCard">
-  <div class="projeto-tags">
-    <span class="tag">Arte Digital</span>
-    <span class="tag">Comissões</span>
-  </div>
-  <h3>Site de desenhos</h3>
-  <a href="https://akanecheng.github.io/GForcArt-/" class="btn">Ver mais</a>
-</div>
-</div>
+<nav>
+<ul>
+<li><a href="index.html#inicio">Início</a></li>
+<li><a href="index.html#sobre">Sobre</a></li>
+<li><a href="projetos.html" class="active">Projetos</a></li>
+<li><a href="index.html#contato">Contato</a></li>
+</ul>
+</nav>
+</header>
 
-</div>
-  
-</div>
-  
-  <footer class="rodape">
-℗ Todos os direitos reservados
+<div class="star"></div>
+
+<main>
+  <section class="projetos-header">
+    <h1>Meus Projetos</h1>
+    <p>Aqui você terá acesso a todos os meus projetos concluídos, recentes e aos que estiverem em andamento.</p>
+  </section>
+
+  <section class="projetos-container-section">
+    <div class="projetoContainer">
+
+      <!-- Projeto 1 -->
+      <div class="projetoCard">
+        <img src="mari.jpg" alt="Portfólio Mariana">
+        <div class="conteudoCard">
+          <div class="projeto-tags">
+            <span class="tag">Portfólio Pessoal</span>
+            <span class="tag">Livro</span>
+            <span class="tag">Poema</span>
+          </div>
+          <h3>Portfólio Mariana</h3>
+          <p>Projeto de site de apresentação pessoal focado em literatura, exposição de livros e poemas autorais.</p>
+          <div class="btn-group">
+            <a href="https://akanecheng.github.io/mariana-jamilly/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Acessar site</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 2 -->
+      <div class="projetoCard">
+        <img src="sp.jpg" alt="Site de desenhos GForcArt">
+        <div class="conteudoCard">
+          <div class="projeto-tags">
+            <span class="tag">Arte Digital</span>
+            <span class="tag">Comissões</span>
+          </div>
+          <h3>Site de Desenhos (GForcArt)</h3>
+          <p>Galeria interativa para exibição de trabalhos artísticos digitais e formulário/informações de encomenda.</p>
+          <div class="btn-group">
+            <a href="https://akanecheng.github.io/GForcArt-/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Acessar Site</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 3 -->
+      <div class="projetoCard">
+        <img src="mm.jpg" alt="Somos Mulheres em Movimento">
+        <div class="conteudoCard">
+          <div class="projeto-tags">
+            <span class="tag">Livro</span>
+            <span class="tag">Comunidade</span>
+          </div>
+          <h3>Somos Mulheres em Movimento</h3>
+          <p>Website focado na criação de uma comunidade de mulheres leitoras e autoras.</p>
+          <div class="btn-group">
+            <a href="https://akanecheng.github.io/Somos-mulheres-em-movimento-/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Acessar Site</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="projetoCard">
+        <img src="psic.jpg" alt="Site de psicologia">
+        <div class="conteudoCard">
+          <div class="projeto-tags">
+            <span class="tag">Psicologia</span>
+            <span class="tag">Tcc</span>
+          </div>
+          <h3>Celiana Werneck Canto</h3>
+          <p>Este projeto consiste em uma página profissional para uma cliente psicóloga.</p>
+          <div class="btn-group">
+            <a href="https://akanecheng.github.io/Celiana-Werneck-Canto-/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Acessar Site</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  &copy; Todos os direitos reservados — Polyana Souza
 </footer>
-</body>
 
+<script>
+const star = document.querySelector(".star");
+let lastX = window.innerWidth / 2;
+let lastY = 120;
+
+window.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
+  const x = window.innerWidth / 2 + Math.sin(scroll * 0.008) * 180;
+  const y = 120 + scroll * 0.5;
+
+  star.style.left = x + "px";
+  star.style.top = y + "px";
+
+  createTrail(lastX, lastY, x, y);
+  lastX = x;
+  lastY = y;
+});
+
+function createTrail(x1, y1, x2, y2){
+  const trail = document.createElement("div");
+  trail.classList.add("trail");
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const length = Math.sqrt(dx * dx + dy * dy);
+  const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+  trail.style.width = length + "px";
+  trail.style.left = x1 + "px";
+  trail.style.top = y1 + "px";
+  trail.style.transform = `rotate(${angle}deg)`;
+
+  document.body.appendChild(trail);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 700);
+}
+</script>
+
+</body>
 </html>
